@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap");
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url(https://coolbackgrounds.io/images/backgrounds/white/white-triangle-369b8d2d.jpg);
+
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.timer span {
+    display: block;
+    font-size: 7em;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.timer span:last-child {
+    font-size: 1em;
+}
+
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+}
+
+.animated-image {
+    animation: slide 2s infinite;
+}
+body {
+    font-family: sans-serif;
+}
+.container {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    max-width: 500px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.overflow {
+    position: relative;
+    margin: 0px auto;
+    width: 200px;
+    overflow: hidden;
+    text-align: right;
+}
+.overflow .text {
+    display: inline-block;
+    border-bottom: 5px solid #333;
+    overflow: hidden;
+    margin: 5px 0px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.overflow .text span {
+    display: inline-block;
+    padding: 0px 0px 0px 5px;
+    letter-spacing: 1px;
+}
+
+.navbar-toggle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: #e9dfdf;
+    background: #16a90c;
+    padding: 1.2rem 2.6rem;
+    border-radius: 0.2rem;
+    transition: opacity .3s;
+}
+
+.navbar-toggle:hover {
+    cursor: pointer;
+    background: #0b460a;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+:root{
+    --bgcol:#37474F;
+    --mcol0: #000000;
+    --mcol1:#2196F3;
+    --mcol2: #000000;
+    --txtcol0:#90A4AE;
+    --txtcol1:#607D8B;
+    --whitecol:#ECEFF1;
+    --darkcol:#263238;
+}
+
+
+body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:15vh;
+    background-color:var(--bgcol);
+}
+
+#puzzle_container{
+    position: relative;
+    width: 50vh;
+    height:50vh;
+    background-color:var(--darkcol);
+    border-radius:8px;
+    border:1px solid var(--mcol0);
+    box-shadow:0px 8px 0px var(--mcol0);
+}
+
+.puzzle_block{
+    position:absolute;
+    left:0;
+    top:0;
+    width:33.4%;
+    height:33.4%;
+    background-color:var(--txtcol1);
+    color:var(--whitecol);
+    font-size:10vh;
+    font-weight:bold;
+    text-align:center;
+    padding-top:3%;
+    cursor: pointer;
+    user-select:none;
+    transition:left 0.3s,top 0.3s;
+}
+
+/*difficulty container*/
+#difficulty_container{
+    display:flex;
+    flex-direction:row;
+    width:50vh;
+    height:10vh;
+    background-color:var(--darkcol);
+    border-radius:8px;
+    margin-top:22px;
+}
+.difficulty_button{
+    flex-grow:1;
+    background-color:inherit;
+    color:var(--mcol2);
+    text-align:center;
+    font-size:3vh;
+    font-weight:bold;
+    padding-top:5%;
+    margin:4px;
+    cursor: pointer;
+    transition:font-size 0.3s;
+}
+.difficulty_button:hover{
+    opacity:0.8;
+    font-size:3.5vh;
+}
+.difficulty_button.active{
+    background-color:inherit;
+    color:var(--mcol0);
+}
